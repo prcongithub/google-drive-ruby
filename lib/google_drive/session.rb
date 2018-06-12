@@ -647,6 +647,9 @@ module GoogleDrive
         when /\/d\/([^\/]+)/
           return Regexp.last_match(1)
           # Human-readable new folder page.
+        when /^\/drive\/[^\/]+\/([^\/]+)\/([^\/]+)\/([^\/]+)/
+          return Regexp.last_match(3)
+          # Human-readable old folder view.
         when /^\/drive\/[^\/]+\/([^\/]+)/
           return Regexp.last_match(1)
           # Human-readable old folder view.
